@@ -1,26 +1,18 @@
 import { Container, MovieList, Movie } from "./styles"
+import { APIKey } from '../../config/Key'
+import { useState, useEffect } from "react"
 
 function Home() {
 
-    const movies = [
-        {
-            id: 1,
-            title: 'Spider-Man',
-            image_url: 'https://br.web.img3.acsta.net/pictures/bzp/01/29007.jpg'
-        },
+    const [movies, setMovies] = useState([])
 
-        {
-            id: 2,
-            title: 'The Batman',
-            image_url: 'https://br.web.img3.acsta.net/pictures/bzp/01/29007.jpg'
-        },
+    useEffect(() => {
+        //consumir a API
 
-        {
-            id: 3,
-            title: 'Vingadores',
-            image_url: 'https://br.web.img3.acsta.net/pictures/bzp/01/29007.jpg'
-        },
-    ]
+    fetch(`https://api.themoviedb.org/3/movie/{movie_id}?api_key=${APIKey}&language=en-US`)
+        .then(response => response.json())
+        .then(data => setMovies(data.results))
+    }, [])
 
     return(
         <Container>
