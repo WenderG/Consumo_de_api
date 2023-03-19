@@ -23,10 +23,10 @@ export const Movie = styled.li`
 
     display: flex;
     flex-direction: column;
-    align-itens: center;
+    text-align: center;
 
     img {
-        width: 100px;
+        width: 200px;
         border-radius: 1rem;
         margin-bottom: 2rem;
     }
