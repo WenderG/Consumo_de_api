@@ -27,7 +27,7 @@ export const Movie = styled.li`
 
     img {
         width: 200px;
-        border-radius: 1rem;
+        border-radius: 15px;
         margin-bottom: 2rem;
     }
 
