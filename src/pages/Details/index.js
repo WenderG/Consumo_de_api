@@ -33,12 +33,16 @@ function Details() {
     return (
         <Container>
             <div className='movie'>
-                <img src={movie.image} alt={movie.sinopse}/>
-                <div className='datails'>
-                    <h1>{movie.title}</h1>
-                    <span>Sinopse: {movie.sinopse}</span>
-                    <span className='release-date'>Data de lançamento: {movie.releaseDate}</span>
-                    <div><Link to="/"><button>Voltar</button></Link></div>
+                <div className='display'>
+                    <div className='imagem'>
+                        <img src={movie.image} alt={movie.sinopse}/>
+                    </div>
+                    <div className='datails'>
+                        <h1>{movie.title}</h1>
+                        <span>Sinopse: {movie.sinopse}</span>
+                        <span className='release-date'>Data de lançamento: {movie.releaseDate}</span>
+                        <div className='botao'><Link to="/"><button>Voltar</button></Link></div>
+                    </div>
                 </div>
             </div>
         </Container>

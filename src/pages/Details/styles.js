@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container =  styled.div`
 
     h1 {
-        margin: 3rem 0;
+        margin: 2rem 0 1rem 0;
     }
 
     .movie {
@@ -12,17 +12,30 @@ export const Container =  styled.div`
         justify-content: justify;
     }
 
+    .display {
+        display: grid;
+        grid-template-areas: "a",
+                             "b";
+        align-items: center;
+    }
+
+    .imagem {
+        text-align: center;
+    }
+
     img {
         border-radius: 15px;
         width: 300px;
     }
 
     .datails {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
         margin-left: 1rem;
+        text-align: justify
         max-width: 50%;
+    }
+
+    .botao {
+        text-align: center;
     }
 
     button  {
@@ -53,9 +66,16 @@ export const Container =  styled.div`
     @media screen and (min-width: 768px) {
         padding: 1.5rem 0 0 7rem;
 
-        .datails { 
-            margin-left: 3rem;
+        .display {
+            display: flex;
         }
-    
+
+        .datails {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            margin-left: 3rem;
+            max-width: 50%;
+        }
     }
 `
